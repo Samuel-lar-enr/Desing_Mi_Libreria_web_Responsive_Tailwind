@@ -4,36 +4,36 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Página Principal - Freakomics Library</title>
-    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/main.css" />
   </head>
 
-  <body>
-    <div class="PGINA-PRINCIPAL">
-      <header class="header">
-        <div class="title">Freakomics Library</div>
-        <div class="logo">
+  <body class="bg-bg-light-blue font-roboto">
+    <div class="flex flex-col min-h-screen relative w-full">
+      <header class="bg-primary-800 h-[75px] flex items-center justify-between px-5 md:px-10 lg:px-20 text-white animate-fade-in">
+        <div class="text-2xl md:text-3xl font-semibold">Freakomics Library</div>
+        <div class="w-[50px] h-[50px] md:w-[62px] md:h-[62px] flex items-center justify-center overflow-hidden">
           <img
             src="../assets/logo.png"
             alt="Freakomics Logo"
-            style="height: 100%; width: auto"
+            class="h-full w-auto"
           />
         </div>
       </header>
 
-      <div class="fastbar">
-        <div class="hamburger" id="hamburger-btn">☰</div>
-        <div class="nav-pills" id="nav-menu">
-          <a href="paginaPrincipal.html" class="pill">Tu librería</a>
+      <div class="bg-primary-400 min-h-[45px] flex flex-col md:flex-row items-center px-5 md:px-10 lg:px-20 border-b border-black py-2 md:py-0">
+        <div class="text-2xl cursor-pointer md:hidden mb-2 md:mb-0" id="hamburger-btn">☰</div>
+        <div class="hidden md:flex flex-col md:flex-row gap-[15px] items-center w-full md:w-auto transition-all duration-400" id="nav-menu">
+          <a href="paginaPrincipal.html" class="pill active">Tu librería</a>
           <a href="landingPage.html" class="pill">Compra On-line</a>
           <div class="pill">Contacto</div>
         </div>
-        <div class="search-bar">Barra de búsqueda</div>
+        <div class="md:ml-auto bg-white rounded ring-1 ring-gray-300 h-[30px] w-full md:w-[250px] flex items-center px-[10px] relative text-gray-600 text-sm after:content-['🔍'] after:absolute after:right-[10px]">Barra de búsqueda</div>
       </div>
 
-      <section class="welcome-section">
-        <div class="welcome-text">
-          <h1>Bienvenido a Freakomics Lb</h1>
-          <p>
+      <section class="bg-primary-800 text-white px-5 py-8 md:px-10 md:py-12 lg:px-20 lg:py-[60px] mx-4 my-6 md:mx-10 md:my-8 lg:mx-20 lg:my-10 rounded-lg flex flex-col lg:flex-row items-center gap-10 overflow-hidden">
+        <div class="flex-1 animate-slide-in-left">
+          <h1 class="text-3xl md:text-4xl lg:text-5xl font-extrabold mb-5">Bienvenido a Freakomics Lb</h1>
+          <p class="leading-relaxed mb-8 text-sm md:text-base">
             En Freakomics te damos la bienvenida al lugar donde los mundos
             increíbles, los héroes memorables y las historias más épicas cobran
             vida. Somos una librería de cómics online creada para fans como tú,
@@ -44,115 +44,115 @@
             ¡Gracias por visitarnos y ser parte de la comunidad Freakomics! Tu
             próxima gran historia comienza aquí.
           </p>
-          <button class="learn-more-btn">Saber más</button>
+          <button class="bg-action-green text-white px-[30px] py-[10px] rounded font-semibold hover:brightness-110 transition-all">Saber más</button>
         </div>
-        <div class="welcome-img">
-          <img src="../assets/welcome_img.png" alt="Bienvenido a Freakomics" />
+        <div class="w-full lg:max-w-[450px] h-[200px] md:h-[350px] bg-gray-300 rounded-lg animate-fade-in shadow-2xl overflow-hidden">
+          <img src="../assets/welcome_img.png" alt="Bienvenido a Freakomics" class="w-full h-full object-cover block" />
         </div>
       </section>
 
-      <section class="products-horizontal">
-        <h2>Productos</h2>
-        <p class="description">
+      <section class="bg-primary-800 text-white px-5 py-8 md:px-10 md:py-12 lg:px-20 lg:py-10 mx-4 my-6 md:mx-10 md:my-8 lg:mx-20 lg:my-10 rounded-lg animate-slide-up">
+        <h2 class="text-2xl md:text-3xl lg:text-3xl mb-5 font-bold">Productos</h2>
+        <p class="mb-5 text-sm md:text-base leading-relaxed">
           En Freakomics encontrarás una cuidada selección de cómics, manga y
           novelas gráficas, desde los títulos más populares hasta ediciones
           especiales. También ofrecemos merchandising y figuras para que lleves
           tus historias favoritas a todas partes.
         </p>
-        <div class="horizontal-scroll">
-          <div class="product-card" style="min-width: 250px">
+        <div class="flex gap-5 overflow-x-auto pb-[15px] scrollbar-thin scrollbar-thumb-action-green scrollbar-track-neutral-50">
+          <div class="bg-white rounded p-0 flex flex-col shadow-lg relative transition-transform hover:-translate-y-1 min-w-[250px]">
             <img
               src="https://th.bing.com/th/id/R.3582e91aeeeb699723c21f352ead828b?rik=qSNYL2PgG12C7A&pid=ImgRaw&r=0"
-              class="product-img"
+              class="w-full h-[250px] bg-gray-100 object-cover border-b border-gray-100"
               alt="Kaiju N8"
             />
-            <div class="product-info-wrap">
-              <div class="product-title">Kayu N8 Vol. 3</div>
-              <p class="product-desc">Kayu N8 Vol. 4h</p>
-              <div class="product-footer">
-                <span class="price">11$</span>
-                <span class="stars">⭐⭐⭐⭐⭐</span>
-                <div class="add-btn">Añadir</div>
+            <div class="p-[10px]">
+              <div class="font-bold text-sm mb-[2px] text-gray-900">Kayu N8 Vol. 3</div>
+              <p class="text-[11px] text-gray-500 mb-2 leading-tight">Kayu N8 Vol. 4h</p>
+              <div class="flex items-center gap-[5px] mt-auto">
+                <span class="font-extrabold text-sm text-black">11$</span>
+                <span class="text-[10px]">⭐⭐⭐⭐⭐</span>
+                <div class="ml-auto bg-primary-800 text-white px-2 py-1 rounded-[2px] text-[12px] font-semibold cursor-pointer hover:bg-[#006b32] transition-colors">Añadir</div>
               </div>
             </div>
           </div>
-          <div class="product-card" style="min-width: 250px">
+          <div class="bg-white rounded p-0 flex flex-col shadow-lg relative transition-transform hover:-translate-y-1 min-w-[250px]">
             <img
               src="https://tse2.mm.bing.net/th/id/OIP.Ha5ybrv8wiwxDFPdIz_GYAHaKd?rs=1&pid=ImgDetMain&o=7&rm=3"
-              class="product-img"
+              class="w-full h-[250px] bg-gray-100 object-cover border-b border-gray-100"
               alt="Re:Zero"
             />
-            <div class="product-info-wrap">
-              <div class="product-title">Vol. 3 Re:Zero</div>
-              <p class="product-desc">Tercer volumen novela ligera</p>
-              <div class="product-footer">
-                <span class="price">11$</span>
-                <span class="stars">⭐⭐⭐⭐⭐</span>
-                <div class="add-btn">Añadir</div>
+            <div class="p-[10px]">
+              <div class="font-bold text-sm mb-[2px] text-gray-900">Vol. 3 Re:Zero</div>
+              <p class="text-[11px] text-gray-500 mb-2 leading-tight">Tercer volumen novela ligera</p>
+              <div class="flex items-center gap-[5px] mt-auto">
+                <span class="font-extrabold text-sm text-black">11$</span>
+                <span class="text-[10px]">⭐⭐⭐⭐⭐</span>
+                <div class="ml-auto bg-primary-800 text-white px-2 py-1 rounded-[2px] text-[12px] font-semibold cursor-pointer hover:bg-[#006b32] transition-colors">Añadir</div>
               </div>
             </div>
           </div>
-          <div class="product-card" style="min-width: 250px">
+          <div class="bg-white rounded p-0 flex flex-col shadow-lg relative transition-transform hover:-translate-y-1 min-w-[250px]">
             <div
-              class="product-img"
+              class="w-full h-[250px] bg-gray-100 object-cover border-b border-gray-100"
               style="
                 background: url(&quot;https://image.tmdb.org/t/p/original/v3Ka0J3iMte50oiH4cmXPISM3rm.jpg&quot;)
                   center/cover;
               "
             ></div>
-            <div class="product-info-wrap">
-              <div class="product-title">Poster Index</div>
-              <p class="product-desc">Poster Certain mag. index</p>
-              <div class="product-footer">
-                <span class="price">10$</span>
-                <span class="stars">⭐⭐⭐⭐</span>
-                <div class="add-btn">Añadir</div>
+            <div class="p-[10px]">
+              <div class="font-bold text-sm mb-[2px] text-gray-900">Poster Index</div>
+              <p class="text-[11px] text-gray-500 mb-2 leading-tight">Poster Certain mag. index</p>
+              <div class="flex items-center gap-[5px] mt-auto">
+                <span class="font-extrabold text-sm text-black">10$</span>
+                <span class="text-[10px]">⭐⭐⭐⭐</span>
+                <div class="ml-auto bg-primary-800 text-white px-2 py-1 rounded-[2px] text-[12px] font-semibold cursor-pointer hover:bg-[#006b32] transition-colors">Añadir</div>
               </div>
             </div>
           </div>
-          <div class="product-card" style="min-width: 250px">
+          <div class="bg-white rounded p-0 flex flex-col shadow-lg relative transition-transform hover:-translate-y-1 min-w-[250px]">
             <div
-              class="product-img"
+              class="w-full h-[250px] bg-gray-100 object-cover border-b border-gray-100"
               style="
                 background: url(&quot;https://tse2.mm.bing.net/th/id/OIP.GmfI14RJNh4BJR-hDahg-AHaH-?rs=1&pid=ImgDetMain&o=7&rm=3&quot;)
                   center/cover;
               "
             ></div>
-            <div class="product-info-wrap">
-              <div class="product-title">Figura Emilia</div>
-              <p class="product-desc">Figura Nendoroid Emilia</p>
-              <div class="product-footer">
-                <span class="price">25$</span>
-                <span class="stars">⭐⭐⭐⭐⭐</span>
-                <div class="add-btn">Añadir</div>
+            <div class="p-[10px]">
+              <div class="font-bold text-sm mb-[2px] text-gray-900">Figura Emilia</div>
+              <p class="text-[11px] text-gray-500 mb-2 leading-tight">Figura Nendoroid Emilia</p>
+              <div class="flex items-center gap-[5px] mt-auto">
+                <span class="font-extrabold text-sm text-black">25$</span>
+                <span class="text-[10px]">⭐⭐⭐⭐⭐</span>
+                <div class="ml-auto bg-primary-800 text-white px-2 py-1 rounded-[2px] text-[12px] font-semibold cursor-pointer hover:bg-[#006b32] transition-colors">Añadir</div>
               </div>
             </div>
           </div>
-          <div class="product-card" style="min-width: 250px">
+          <div class="bg-white rounded p-0 flex flex-col shadow-lg relative transition-transform hover:-translate-y-1 min-w-[250px]">
             <div
-              class="product-img"
+              class="w-full h-[250px] bg-gray-100 object-cover border-b border-gray-100"
               style="
                 background: url(&quot;https://www.tivicr.com/10024-large_default/abystyle-studio-assassination-classroom-koro-sensei-sfc-figura-coleccionable-de-pvc-estatua-de-anime-figura-de-manga-de.jpg&quot;)
                   center/cover;
               "
             ></div>
-            <div class="product-info-wrap">
-              <div class="product-title">Figura Koro-sensei</div>
-              <p class="product-desc">Figura Assassination Classroom</p>
-              <div class="product-footer">
-                <span class="price">33$</span>
-                <span class="stars">⭐⭐⭐⭐⭐</span>
-                <div class="add-btn">Añadir</div>
+            <div class="p-[10px]">
+              <div class="font-bold text-sm mb-[2px] text-gray-900">Figura Koro-sensei</div>
+              <p class="text-[11px] text-gray-500 mb-2 leading-tight">Figura Assassination Classroom</p>
+              <div class="flex items-center gap-[5px] mt-auto">
+                <span class="font-extrabold text-sm text-black">33$</span>
+                <span class="text-[10px]">⭐⭐⭐⭐⭐</span>
+                <div class="ml-auto bg-primary-800 text-white px-2 py-1 rounded-[2px] text-[12px] font-semibold cursor-pointer hover:bg-[#006b32] transition-colors">Añadir</div>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      <section class="store-search">
-        <h2>Buscador de Tiendas</h2>
-        <div class="store-content">
-          <div class="map-container">
+      <section class="bg-primary-800 text-white px-5 py-8 md:px-10 md:py-12 lg:px-20 lg:py-10 mx-4 my-6 md:mx-10 md:my-8 lg:mx-20 lg:my-10 rounded-lg animate-slide-up">
+        <h2 class="text-2xl md:text-3xl lg:text-3xl mb-5 font-bold">Buscador de Tiendas</h2>
+        <div class="flex flex-col lg:flex-row gap-[30px] lg:h-[500px]">
+          <div class="flex-[2] bg-gray-300 rounded-lg h-[250px] md:h-[300px] lg:h-full">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12716.444734898495!2d-3.606670876184082!3d37.17733621471378!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd71fcb9d7e36653%3A0x6a2c27cf5c8f8b!2sGranada!5e0!3m2!1ses!2ses!4v1704810000000!5m2!1ses!2ses"
               width="100%"
@@ -164,139 +164,34 @@
             >
             </iframe>
           </div>
-          <div class="store-list">
-            <div class="store-item">
+          <div class="flex-1 flex flex-col gap-[15px] overflow-y-auto pr-[10px] max-h-[300px] lg:max-h-none">
+            <div class="bg-[#fff0f0] flex overflow-hidden rounded-[4px] h-[80px] shrink-0 mb-3 shadow-[0_2px_4px_rgba(0,0,0,0.1)] text-gray-800">
               <img
                 src="../assets/store_front_comic_shop.png"
-                class="store-item-img"
+                class="w-20 h-full object-cover shrink-0"
                 alt="Tienda"
               />
-              <div class="store-item-info">
-                <h4>Calle Fernando DE Los Rios Granada</h4>
-                <div class="store-item-details">
-                  <span class="store-status">Abiertos Ahora</span>
-                  <span class="store-stars">⭐⭐⭐⭐⭐</span>
-                  <span class="store-distance">20km</span>
+              <div class="flex-1 px-3 flex flex-col justify-center">
+                <h4 class="text-base font-bold m-0 mb-1 text-gray-900 truncate leading-tight block">Calle Fernando DE Los Rios Granada</h4>
+                <div class="flex items-center gap-2 text-xs mt-[2px]">
+                  <span class="text-gray-900">Abiertos Ahora</span>
+                  <span class="text-[#FFD700] text-sm">⭐⭐⭐⭐⭐</span>
+                  <span class="text-gray-900 ml-auto">20km</span>
                 </div>
               </div>
             </div>
-            <div class="store-item">
+            <div class="bg-[#fff0f0] flex overflow-hidden rounded-[4px] h-[80px] shrink-0 mb-3 shadow-[0_2px_4px_rgba(0,0,0,0.1)] text-gray-800">
               <img
                 src="../assets/store_front_comic_shop.png"
-                class="store-item-img"
+                class="w-20 h-full object-cover shrink-0"
                 alt="Tienda"
               />
-              <div class="store-item-info">
-                <h4>Avenida de Cervantes Granada</h4>
-                <div class="store-item-details">
-                  <span class="store-status">Abiertos Ahora</span>
-                  <span class="store-stars">⭐⭐⭐⭐⭐</span>
-                  <span class="store-distance">22km</span>
-                </div>
-              </div>
-            </div>
-            <div class="store-item">
-              <img
-                src="../assets/store_front_comic_shop.png"
-                class="store-item-img"
-                alt="Tienda"
-              />
-              <div class="store-item-info">
-                <h4>Calle Pedro Antonio de Alarcón</h4>
-                <div class="store-item-details">
-                  <span class="store-status">Abiertos Ahora</span>
-                  <span class="store-stars">⭐⭐⭐⭐</span>
-                  <span class="store-distance">15km</span>
-                </div>
-              </div>
-            </div>
-            <div class="store-item">
-              <img
-                src="../assets/store_front_comic_shop.png"
-                class="store-item-img"
-                alt="Tienda"
-              />
-              <div class="store-item-info">
-                <h4>Calle Recogidas Granada</h4>
-                <div class="store-item-details">
-                  <span class="store-status">Abiertos Ahora</span>
-                  <span class="store-stars">⭐⭐⭐⭐⭐</span>
-                  <span class="store-distance">18km</span>
-                </div>
-              </div>
-            </div>
-            <div class="store-item">
-              <img
-                src="../assets/store_front_comic_shop.png"
-                class="store-item-img"
-                alt="Tienda"
-              />
-              <div class="store-item-info">
-                <h4>Plaza Nueva Granada</h4>
-                <div class="store-item-details">
-                  <span class="store-status">Abiertos Ahora</span>
-                  <span class="store-stars">⭐⭐⭐⭐⭐</span>
-                  <span class="store-distance">10km</span>
-                </div>
-              </div>
-            </div>
-            <div class="store-item">
-              <img
-                src="../assets/store_front_comic_shop.png"
-                class="store-item-img"
-                alt="Tienda"
-              />
-              <div class="store-item-info">
-                <h4>Calle Mesones Granada</h4>
-                <div class="store-item-details">
-                  <span class="store-status">Abiertos Ahora</span>
-                  <span class="store-stars">⭐⭐⭐⭐</span>
-                  <span class="store-distance">12km</span>
-                </div>
-              </div>
-            </div>
-            <div class="store-item">
-              <img
-                src="../assets/store_front_comic_shop.png"
-                class="store-item-img"
-                alt="Tienda"
-              />
-              <div class="store-item-info">
-                <h4>Centro Comercial Nevada Armilla</h4>
-                <div class="store-item-details">
-                  <span class="store-status">Abiertos Ahora</span>
-                  <span class="store-stars">⭐⭐⭐⭐⭐</span>
-                  <span class="store-distance">25km</span>
-                </div>
-              </div>
-            </div>
-            <div class="store-item">
-              <img
-                src="../assets/store_front_comic_shop.png"
-                class="store-item-img"
-                alt="Tienda"
-              />
-              <div class="store-item-info">
-                <h4>Calle Alhóndiga Granada</h4>
-                <div class="store-item-details">
-                  <span class="store-status">Abiertos Ahora</span>
-                  <span class="store-stars">⭐⭐⭐⭐⭐</span>
-                  <span class="store-distance">11km</span>
-                </div>
-              </div>
-            </div>
-            <div class="store-item">
-              <img
-                src="../assets/store_front_comic_shop.png"
-                class="store-item-img"
-                alt="Tienda"
-              />
-              <div class="store-item-info">
-                <h4>Avenida de la Constitución Granada</h4>
-                <div class="store-item-details">
-                  <span class="store-status">Abiertos Ahora</span>
-                  <span class="store-stars">⭐⭐⭐⭐</span>
-                  <span class="store-distance">16km</span>
+              <div class="flex-1 px-3 flex flex-col justify-center">
+                <h4 class="text-base font-bold m-0 mb-1 text-gray-900 truncate leading-tight block">Avenida de Cervantes Granada</h4>
+                <div class="flex items-center gap-2 text-xs mt-[2px]">
+                  <span class="text-gray-900">Abiertos Ahora</span>
+                  <span class="text-[#FFD700] text-sm">⭐⭐⭐⭐⭐</span>
+                  <span class="text-gray-900 ml-auto">22km</span>
                 </div>
               </div>
             </div>
@@ -304,28 +199,28 @@
         </div>
       </section>
 
-      <footer class="footer">
-        <div class="social-icons">
+      <footer class="bg-primary-800 flex flex-col md:flex-row items-center p-4 md:px-10 lg:px-20 text-white min-h-[75px] gap-4 md:gap-0">
+        <div class="flex gap-5">
           <a href="mailto:info@freakomics.com"
             ><img
               src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Gmail_icon_%282020%29.svg"
               alt="Gmail"
-              style="width: 32px; height: 32px"
+              class="w-8 h-8"
           /></a>
           <a href="#"
             ><img
               src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Instagram_logo_2016.svg"
               alt="Instagram"
-              style="width: 32px; height: 32px"
+              class="w-8 h-8"
           /></a>
           <a href="#"
             ><img
               src="https://img.icons8.com/?size=100&id=phOKFKYpe00C&format=png&color=000000"
               alt="X"
-              style="width: 32px; height: 32px"
+              class="w-8 h-8"
           /></a>
         </div>
-        <div class="legal">
+        <div class="md:ml-auto flex flex-col md:flex-row gap-2 md:gap-[30px] text-xs md:text-sm text-center md:text-left">
           <span>Política de datos</span>
           <span>Cookies</span>
           <span>Copyright: Samuel Lara Enríquez</span>
@@ -333,11 +228,13 @@
       </footer>
     </div>
     <script>
-      document
-        .getElementById("hamburger-btn")
-        .addEventListener("click", function () {
-          document.getElementById("nav-menu").classList.toggle("active");
-        });
+      const hamburger = document.getElementById("hamburger-btn");
+      const navMenu = document.getElementById("nav-menu");
+      
+      hamburger.addEventListener("click", function () {
+        navMenu.classList.toggle("hidden");
+        navMenu.classList.toggle("flex");
+      });
     </script>
   </body>
 </html>

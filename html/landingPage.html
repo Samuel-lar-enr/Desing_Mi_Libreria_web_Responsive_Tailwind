@@ -5,185 +5,146 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Catálogo - Freakomics Library</title>
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/main.css">
 </head>
 
-<body>
-    <div class="LANDING-PAGE">
-        <header class="header">
-            <div class="title">Freakomics Library</div>
-            <div class="logo">
-                <img src="../assets/logo.png" alt="Freakomics Logo" style="height: 100%; width: auto;">
+<body class="bg-bg-light-blue font-roboto">
+    <div class="flex flex-col min-h-screen relative w-full">
+        <header class="bg-primary-800 h-[75px] flex items-center justify-between px-5 md:px-10 lg:px-20 text-white animate-fade-in">
+            <div class="text-2xl md:text-3xl font-semibold">Freakomics Library</div>
+            <div class="w-[50px] h-[50px] md:w-[62px] md:h-[62px] flex items-center justify-center overflow-hidden">
+                <img src="../assets/logo.png" alt="Freakomics Logo" class="h-full w-auto">
             </div>
         </header>
 
-        <div class="fastbar">
-            <div class="hamburger" id="hamburger-btn">☰</div>
-            <div class="nav-pills" id="nav-menu">
+        <div class="bg-primary-400 min-h-[45px] flex flex-col md:flex-row items-center px-5 md:px-10 lg:px-20 border-b border-black py-2 md:py-0">
+            <div class="text-2xl cursor-pointer md:hidden mb-2 md:mb-0" id="hamburger-btn">☰</div>
+            <div class="hidden md:flex flex-col md:flex-row gap-[15px] items-center w-full md:w-auto transition-all duration-400" id="nav-menu">
                 <a href="paginaPrincipal.html" class="pill">Tu librería</a>
                 <a href="landingPage.html" class="pill active">Compra On-line</a>
                 <div class="pill">Contacto</div>
             </div>
-            <div class="search-bar">Barra de búsqueda</div>
+            <div class="md:ml-auto bg-white rounded ring-1 ring-gray-300 h-[30px] w-full md:w-[250px] flex items-center px-[10px] relative text-gray-600 text-sm after:content-['🔍'] after:absolute after:right-[10px]">Barra de búsqueda</div>
         </div>
 
-        <main class="main-content">
-            <aside class="sidebar">
-                <h3>Filtrar por:</h3>
-                <div class="filter-group">
-                    <div class="filter-item">
-                        <div class="checkbox checked"></div> Todo
+        <main class="flex flex-col md:flex-row flex-1">
+            <aside class="w-full md:w-[350px] bg-[#12180B] p-8 md:p-10 text-white">
+                <h3 class="text-2xl md:text-3xl font-bold mb-8 md:mb-10">Filtrar por:</h3>
+                <div class="flex flex-col md:flex-row lg:flex-col flex-wrap gap-5">
+                    <div class="flex items-center gap-2.5 text-base">
+                        <div class="w-5 h-5 border-2 border-white rounded-sm flex items-center justify-center relative cursor-pointer after:content-['✓'] after:text-white after:font-bold after:text-base"></div> Todo
                     </div>
-                    <div class="filter-item">
-                        <div class="checkbox"></div> Novelas ligeras
+                    <div class="flex items-center gap-2.5 text-base">
+                        <div class="w-5 h-5 border-2 border-white rounded-sm flex items-center justify-center relative cursor-pointer"></div> Novelas ligeras
                     </div>
-                    <div class="filter-item">
-                        <div class="checkbox"></div> Figuras
+                    <div class="flex items-center gap-2.5 text-base">
+                        <div class="w-5 h-5 border-2 border-white rounded-sm flex items-center justify-center relative cursor-pointer"></div> Figuras
                     </div>
-                    <div class="filter-item">
-                        <div class="checkbox"></div> Posters
+                    <div class="flex items-center gap-2.5 text-base">
+                        <div class="w-5 h-5 border-2 border-white rounded-sm flex items-center justify-center relative cursor-pointer"></div> Posters
                     </div>
-                    <div class="filter-item">
-                        <div class="checkbox"></div> Otros
+                    <div class="flex items-center gap-2.5 text-base">
+                        <div class="w-5 h-5 border-2 border-white rounded-sm flex items-center justify-center relative cursor-pointer"></div> Otros
                     </div>
                 </div>
             </aside>
 
-            <section class="product-grid">
+            <section class="flex-1 p-5 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-[15px] overflow-y-auto md:h-[calc(100vh-120px)]">
                 <!-- Row 1 -->
-                <div class="product-card">
-                    <img src="https://m.media-amazon.com/images/I/81f6kZNIJBL._SL1500_.jpg" class="product-img"
+                <div class="bg-white rounded p-0 flex flex-col shadow-lg relative transition-transform hover:-translate-y-1">
+                    <img src="https://m.media-amazon.com/images/I/81f6kZNIJBL._SL1500_.jpg" class="w-full h-[250px] bg-gray-100 object-cover border-b border-gray-100"
                         alt="Re:Zero Vol. 2">
-                    <div class="product-info-wrap">
-                        <div class="product-title">Vol. 2 Re:Zero</div>
-                        <p class="product-desc">Primer volumen novela ligera Re:zero</p>
-                        <div class="product-footer">
-                            <span class="price">10$</span>
-                            <span class="stars">⭐⭐⭐⭐⭐</span>
-                            <div class="add-btn">Añadir</div>
+                    <div class="p-[10px]">
+                        <div class="font-bold text-sm mb-[2px] text-gray-900">Vol. 2 Re:Zero</div>
+                        <p class="text-[11px] text-gray-500 mb-2 leading-tight">Primer volumen novela ligera Re:zero</p>
+                        <div class="flex items-center gap-[5px] mt-auto">
+                            <span class="font-extrabold text-sm text-black">10$</span>
+                            <span class="text-[10px]">⭐⭐⭐⭐⭐</span>
+                            <div class="ml-auto bg-primary-800 text-white px-2 py-1 rounded-[2px] text-[12px] font-semibold cursor-pointer hover:bg-[#006b32] transition-colors">Añadir</div>
                         </div>
                     </div>
                 </div>
-                <div class="product-card">
+                <div class="bg-white rounded p-0 flex flex-col shadow-lg relative transition-transform hover:-translate-y-1">
                     <img src="https://okashihn.com/cdn/shop/products/rezercapitulo1vol1.webp?v=1680562808&width=1946"
-                        class="product-img" alt="Re:Zero Vol. 1">
-                    <div class="product-info-wrap">
-                        <div class="product-title">Vol. 1 Re:zero</div>
-                        <p class="product-desc">Segundo tomo novela ligera Re:zero</p>
-                        <div class="product-footer">
-                            <span class="price">10$</span>
-                            <span class="stars">⭐⭐⭐⭐⭐</span>
-                            <div class="add-btn">Añadir</div>
+                        class="w-full h-[250px] bg-gray-100 object-cover border-b border-gray-100" alt="Re:Zero Vol. 1">
+                    <div class="p-[10px]">
+                        <div class="font-bold text-sm mb-[2px] text-gray-900">Vol. 1 Re:zero</div>
+                        <p class="text-[11px] text-gray-500 mb-2 leading-tight">Segundo tomo novela ligera Re:zero</p>
+                        <div class="flex items-center gap-[5px] mt-auto">
+                            <span class="font-extrabold text-sm text-black">10$</span>
+                            <span class="text-[10px]">⭐⭐⭐⭐⭐</span>
+                            <div class="ml-auto bg-primary-800 text-white px-2 py-1 rounded-[2px] text-[12px] font-semibold cursor-pointer hover:bg-[#006b32] transition-colors">Añadir</div>
                         </div>
                     </div>
                 </div>
-                <div class="product-card">
-                    <img src="https://tse2.mm.bing.net/th/id/OIP.Ha5ybrv8wiwxDFPdIz_GYAHaKd?rs=1&pid=ImgDetMain&o=7&rm=3" class="product-img"
+                <!-- ... Row items similar ... -->
+                <div class="bg-white rounded p-0 flex flex-col shadow-lg relative transition-transform hover:-translate-y-1">
+                    <img src="https://tse2.mm.bing.net/th/id/OIP.Ha5ybrv8wiwxDFPdIz_GYAHaKd?rs=1&pid=ImgDetMain&o=7&rm=3" class="w-full h-[250px] bg-gray-100 object-cover border-b border-gray-100"
                         alt="Re:Zero Vol. 3">
-                    <div class="product-info-wrap">
-                        <div class="product-title">Vol. 3 Re:Zero</div>
-                        <p class="product-desc">Tercer volumen novela ligera Re:zero</p>
-                        <div class="product-footer">
-                            <span class="price">11$</span>
-                            <span class="stars">⭐⭐⭐⭐⭐</span>
-                            <div class="add-btn">Añadir</div>
+                    <div class="p-[10px]">
+                        <div class="font-bold text-sm mb-[2px] text-gray-900">Vol. 3 Re:Zero</div>
+                        <p class="text-[11px] text-gray-500 mb-2 leading-tight">Tercer volumen novela ligera Re:zero</p>
+                        <div class="flex items-center gap-[5px] mt-auto">
+                            <span class="font-extrabold text-sm text-black">11$</span>
+                            <span class="text-[10px]">⭐⭐⭐⭐⭐</span>
+                            <div class="ml-auto bg-primary-800 text-white px-2 py-1 rounded-[2px] text-[12px] font-semibold cursor-pointer hover:bg-[#006b32] transition-colors">Añadir</div>
                         </div>
                     </div>
                 </div>
-                <div class="product-card">
-                    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhCkWgUeVG0soLnl7k4RNiuQR4N69EHMj2Jbb4kZKhIJoyI7YgnNtsW41dbwCjYNAb2Yxpr-yqe8U5kgPKywjXRxL-8Hz5_LMPA5VEnSnXv-p-Gea7lGgwUTekPgKYIm9_uU9o8lTyDS0Q/s1600/re+zero+volumen+4.jpg" class="product-img"
+                <div class="bg-white rounded p-0 flex flex-col shadow-lg relative transition-transform hover:-translate-y-1">
+                    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhCkWgUeVG0soLnl7k4RNiuQR4N69EHMj2Jbb4kZKhIJoyI7YgnNtsW41dbwCjYNAb2Yxpr-yqe8U5kgPKywjXRxL-8Hz5_LMPA5VEnSnXv-p-Gea7lGgwUTekPgKYIm9_uU9o8lTyDS0Q/s1600/re+zero+volumen+4.jpg" class="w-full h-[250px] bg-gray-100 object-cover border-b border-gray-100"
                         alt="Re:Zero Vol. 4">
-                    <div class="product-info-wrap">
-                        <div class="product-title">Vol. 4 Re:Zero</div>
-                        <p class="product-desc">Cuarto volumen novela ligera Re:zero</p>
-                        <div class="product-footer">
-                            <span class="price">11$</span>
-                            <span class="stars">⭐⭐⭐⭐⭐</span>
-                            <div class="add-btn">Añadir</div>
+                    <div class="p-[10px]">
+                        <div class="font-bold text-sm mb-[2px] text-gray-900">Vol. 4 Re:Zero</div>
+                        <p class="text-[11px] text-gray-500 mb-2 leading-tight">Cuarto volumen novela ligera Re:zero</p>
+                        <div class="flex items-center gap-[5px] mt-auto">
+                            <span class="font-extrabold text-sm text-black">11$</span>
+                            <span class="text-[10px]">⭐⭐⭐⭐⭐</span>
+                            <div class="ml-auto bg-primary-800 text-white px-2 py-1 rounded-[2px] text-[12px] font-semibold cursor-pointer hover:bg-[#006b32] transition-colors">Añadir</div>
                         </div>
                     </div>
                 </div>
-                <!-- Row 2 -->
-                <div class="product-card">
-                    <img src="https://th.bing.com/th/id/R.3582e91aeeeb699723c21f352ead828b?rik=qSNYL2PgG12C7A&pid=ImgRaw&r=0" class="product-img"
+                <!-- ... other items ... -->
+                <div class="bg-white rounded p-0 flex flex-col shadow-lg relative transition-transform hover:-translate-y-1">
+                    <img src="https://th.bing.com/th/id/R.3582e91aeeeb699723c21f352ead828b?rik=qSNYL2PgG12C7A&pid=ImgRaw&r=0" class="w-full h-[250px] bg-gray-100 object-cover border-b border-gray-100"
                         alt="Kaiju N8 Vol. 1">
-                    <div class="product-info-wrap">
-                        <div class="product-title">Kayu N8 Vol. 1</div>
-                        <p class="product-desc">Kayu N8 Vol. 1</p>
-                        <div class="product-footer">
-                            <span class="price">11$</span>
-                            <span class="stars">⭐⭐⭐⭐⭐</span>
-                            <div class="add-btn">Añadir</div>
+                    <div class="p-[10px]">
+                        <div class="font-bold text-sm mb-[2px] text-gray-900">Kayu N8 Vol. 1</div>
+                        <p class="text-[11px] text-gray-500 mb-2 leading-tight">Kayu N8 Vol. 1</p>
+                        <div class="flex items-center gap-[5px] mt-auto">
+                            <span class="font-extrabold text-sm text-black">11$</span>
+                            <span class="text-[10px]">⭐⭐⭐⭐⭐</span>
+                            <div class="ml-auto bg-primary-800 text-white px-2 py-1 rounded-[2px] text-[12px] font-semibold cursor-pointer hover:bg-[#006b32] transition-colors">Añadir</div>
                         </div>
                     </div>
                 </div>
-                <div class="product-card">
-                    <img src="https://d28hgpri8am2if.cloudfront.net/book_images/onix/cvr9781974727148/kaiju-no-8-vol-2-9781974727148_hr.jpg" class="product-img"
+                <div class="bg-white rounded p-0 flex flex-col shadow-lg relative transition-transform hover:-translate-y-1">
+                    <img src="https://d28hgpri8am2if.cloudfront.net/book_images/onix/cvr9781974727148/kaiju-no-8-vol-2-9781974727148_hr.jpg" class="w-full h-[250px] bg-gray-100 object-cover border-b border-gray-100"
                         alt="Kaiju N8 Vol. 2">
-                    <div class="product-info-wrap">
-                        <div class="product-title">Kayu N8 Vol. 2</div>
-                        <p class="product-desc">Kayu N8 Vol. 2</p>
-                        <div class="product-footer">
-                            <span class="price">11$</span>
-                            <span class="stars">⭐⭐⭐⭐⭐</span>
-                            <div class="add-btn">Añadir</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="product-card">
-                    <img src="https://tse4.mm.bing.net/th/id/OIP.3hVi06fXfbdujg9FVl2oCAHaLD?rs=1&pid=ImgDetMain&o=7&rm=3" class="product-img"
-                        alt="Kaiju N8 Vol. 3">
-                    <div class="product-info-wrap">
-                        <div class="product-title">Kayu N8 Vol. 3</div>
-                        <p class="product-desc">Kayu N8 Vol. 4h</p>
-                        <div class="product-footer">
-                            <span class="price">11$</span>
-                            <span class="stars">⭐⭐⭐⭐⭐</span>
-                            <div class="add-btn">Añadir</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="product-card">
-                    <img src="https://http2.mlstatic.com/D_NQ_NP_889057-MLU73651714146_012024-O.webp" class="product-img"
-                        alt="Kaiju N8 Vol. 4">
-                    <div class="product-info-wrap">
-                        <div class="product-title">Kayu N8 Vol. 4</div>
-                        <p class="product-desc">Kayu N8 Vol. 4</p>
-                        <div class="product-footer">
-                            <span class="price">11$</span>
-                            <span class="stars">⭐⭐⭐⭐⭐</span>
-                            <div class="add-btn">Añadir</div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Row 3 for scrolling -->
-                <div class="product-card">
-                    <img src="https://i.pinimg.com/736x/fb/4a/5f/fb4a5f82a15af7f3d31299bbc04c85fc--a-certain-magical-index-anime-reviews.jpg" class="product-img"
-                        alt="Certain magical index Extra">
-                    <div class="product-info-wrap">
-                        <div class="product-title">Certain magical index</div>
-                        <p class="product-desc">Edición especial coleccionista</p>
-                        <div class="product-footer">
-                            <span class="price">15$</span>
-                            <span class="stars">⭐⭐⭐⭐⭐</span>
-                            <div class="add-btn">Añadir</div>
+                    <div class="p-[10px]">
+                        <div class="font-bold text-sm mb-[2px] text-gray-900">Kayu N8 Vol. 2</div>
+                        <p class="text-[11px] text-gray-500 mb-2 leading-tight">Kayu N8 Vol. 2</p>
+                        <div class="flex items-center gap-[5px] mt-auto">
+                            <span class="font-extrabold text-sm text-black">11$</span>
+                            <span class="text-[10px]">⭐⭐⭐⭐⭐</span>
+                            <div class="ml-auto bg-primary-800 text-white px-2 py-1 rounded-[2px] text-[12px] font-semibold cursor-pointer hover:bg-[#006b32] transition-colors">Añadir</div>
                         </div>
                     </div>
                 </div>
             </section>
         </main>
 
-        <footer class="footer">
-            <div class="social-icons">
+        <footer class="bg-primary-800 flex flex-col md:flex-row items-center p-4 md:px-10 lg:px-20 text-white min-h-[75px] gap-4 md:gap-0">
+            <div class="flex gap-5">
                 <a href="mailto:info@freakomics.com"><img
                         src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Gmail_icon_%282020%29.svg" alt="Gmail"
-                        style="width:32px;height:32px;"></a>
+                        class="w-8 h-8"></a>
                 <a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Instagram_logo_2016.svg"
-                        alt="Instagram" style="width:32px;height:32px;"></a>
+                        alt="Instagram" class="w-8 h-8"></a>
                 <a href="#"><img src="https://img.icons8.com/?size=100&id=phOKFKYpe00C&format=png&color=000000" alt="X"
-                        style="width:32px;height:32px;"></a>
+                        class="w-8 h-8"></a>
             </div>
-            <div class="legal">
+            <div class="md:ml-auto flex flex-col md:flex-row gap-2 md:gap-[30px] text-xs md:text-sm text-center md:text-left">
                 <span>Política de datos</span>
                 <span>Cookies</span>
                 <span>Copyright: Samuel Lara Enríquez</span>
@@ -191,8 +152,12 @@
         </footer>
     </div>
     <script>
-        document.getElementById('hamburger-btn').addEventListener('click', function() {
-            document.getElementById('nav-menu').classList.toggle('active');
+        const hamburger = document.getElementById("hamburger-btn");
+        const navMenu = document.getElementById("nav-menu");
+        
+        hamburger.addEventListener("click", function () {
+            navMenu.classList.toggle("hidden");
+            navMenu.classList.toggle("flex");
         });
     </script>
 </body>
